@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mur Abogados | Derecho de la Salud</title>
+    
+    <!-- Google Fonts: Playfair Display (Serif para elegancia) e Inter (Sans para legibilidad) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome para Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e293b', // Azul marino oscuro (Confianza, autoridad)
+                        primaryLight: '#334155',
+                        secondary: '#b45309', // Tono bronce/dorado oscuro (Prestigio)
+                        secondaryLight: '#d97706',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos personalizados para animaciones sutiles */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        
+        /* Fondo del Hero */
+        .hero-bg {
+            background-image: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.95)), url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-600 antialiased bg-gray-50">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent text-white py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="font-serif text-2xl font-bold tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-scale-balanced text-secondaryLight"></i>
+                        <span>Mur Abogados<span class="text-secondaryLight"> | </span>Derecho de la Salud</span>
+                    </a>
+                </div>
+                
+                <!-- Menú de Escritorio -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="hover:text-secondaryLight transition-colors">Inicio</a>
+                    <a href="#areas" class="hover:text-secondaryLight transition-colors">Áreas de Práctica</a>
+                    <a href="#nosotros" class="hover:text-secondaryLight transition-colors">Nosotros</a>
+                    <a href="#testimonios" class="hover:text-secondaryLight transition-colors">Testimonios</a>
+                    <a href="#contacto" class="bg-secondary hover:bg-secondaryLight text-white px-6 py-2 rounded-sm font-medium transition-colors shadow-lg">
+                        Consulta Gratuita
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-secondaryLight focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil (Oculto por defecto) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary w-full absolute top-full left-0 shadow-xl border-t border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#inicio" class="block px-3 py-2 hover:bg-primaryLight rounded-md transition-colors mobile-link">Inicio</a>
+                <a href="#areas" class="block px-3 py-2 hover:bg-primaryLight rounded-md transition-colors mobile-link">Áreas de Práctica</a>
+                <a href="#nosotros" class="block px-3 py-2 hover:bg-primaryLight rounded-md transition-colors mobile-link">Nosotros</a>
+                <a href="#contacto" class="block px-3 py-2 text-secondaryLight font-bold mobile-link">Contactar Ahora</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg min-h-screen flex items-center relative pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center md:text-left">
+            <div class="max-w-3xl">
+                <span class="text-secondaryLight font-semibold tracking-widest uppercase text-sm mb-4 block fade-in-up">Excelencia Legal a su Servicio</span>
+                <h1 class="text-4xl md:text-6xl font-serif font-bold text-white leading-tight mb-6 fade-in-up delay-100">
+                    Defensa Jurídica del <span class="text-secondaryLight italic">Derecho a la Salud</span>.
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 fade-in-up delay-200 font-light">
+                    Asesoramiento legal en conflictos por falta de cobertura de tratamientos, medicamentos, y prestaciones médicas.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start fade-in-up delay-200">
+                    <a href="https://wa.me/5491100000000" target="_blank" rel="noopener noreferrer" class="bg-secondary hover:bg-secondaryLight text-white px-8 py-4 rounded-sm font-medium text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> Consultar por WhatsApp
+                    </a>
+                    <a href="#areas" class="border border-white hover:bg-white hover:text-primary text-white px-8 py-4 rounded-sm font-medium text-lg transition-all flex items-center justify-center">
+                        Conocer Áreas de Práctica
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner de Confianza (Stats) -->
+    <!-- <section class="bg-white border-b border-gray-200 relative -mt-10 z-20 max-w-5xl mx-auto rounded-sm shadow-xl">
+        <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200 text-center">
+            <div class="p-8">
+                <div class="text-4xl text-secondaryLight mb-2"><i class="fa-solid fa-award"></i></div>
+                <h3 class="text-3xl font-serif font-bold text-primary mb-1">20+</h3>
+                <p class="text-gray-500 font-medium text-sm uppercase tracking-wider">Años de Experiencia</p>
+            </div>
+            <div class="p-8">
+                <div class="text-4xl text-secondaryLight mb-2"><i class="fa-solid fa-handshake"></i></div>
+                <h3 class="text-3xl font-serif font-bold text-primary mb-1">95%</h3>
+                <p class="text-gray-500 font-medium text-sm uppercase tracking-wider">Casos de Éxito</p>
+            </div>
+            <div class="p-8">
+                <div class="text-4xl text-secondaryLight mb-2"><i class="fa-solid fa-users"></i></div>
+                <h3 class="text-3xl font-serif font-bold text-primary mb-1">1000+</h3>
+                <p class="text-gray-500 font-medium text-sm uppercase tracking-wider">Clientes Satisfechos</p>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Áreas de Práctica -->
+    <section id="areas" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-secondaryLight font-semibold tracking-widest uppercase text-sm mb-2">Especialidades</h2>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">Nuestras Áreas de Práctica</h3>
+                <div class="w-20 h-1 bg-secondaryLight mx-auto mb-6"></div>
+                <p class="text-gray-600">Ofrecemos representación legal integral adaptada a las necesidades específicas de cada cliente, garantizando confidencialidad y resultados.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Servicio 1 -->
+                <div class="bg-white p-8 rounded-sm shadow-md hover:shadow-xl transition-shadow border-t-4 border-transparent hover:border-secondaryLight group">
+                    <div class="w-14 h-14 bg-gray-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary transition-colors text-primary group-hover:text-white text-2xl">
+                        <i class="fa-solid fa-gavel"></i>
+                    </div>
+                    <h4 class="text-xl font-serif font-bold text-primary mb-3">Derecho de la Salud</h4>
+                    <p class="text-gray-600 mb-4 text-sm">Especialistas en reclamos de cobertura médica.</p>
+                    <!-- <a href="#contacto" class="text-secondary font-medium hover:text-primary transition-colors text-sm flex items-center gap-1">Saber más <i class="fa-solid fa-angle-right"></i></a> -->
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="bg-white p-8 rounded-sm shadow-md hover:shadow-xl transition-shadow border-t-4 border-transparent hover:border-secondaryLight group">
+                    <div class="w-14 h-14 bg-gray-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary transition-colors text-primary group-hover:text-white text-2xl">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <h4 class="text-xl font-serif font-bold text-primary mb-3">Amparo Judicial</h4>
+                    <p class="text-gray-600 mb-4 text-sm">Acciones legales contra obras sociales y prepagas.</p>
+                    <!-- <a href="#contacto" class="text-secondary font-medium hover:text-primary transition-colors text-sm flex items-center gap-1">Saber más <i class="fa-solid fa-angle-right"></i></a> -->
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="bg-white p-8 rounded-sm shadow-md hover:shadow-xl transition-shadow border-t-4 border-transparent hover:border-secondaryLight group">
+                    <div class="w-14 h-14 bg-gray-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary transition-colors text-primary group-hover:text-white text-2xl">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+                    <h4 class="text-xl font-serif font-bold text-primary mb-3">Medicamentos de Alto Costo</h4>
+                    <p class="text-gray-600 mb-4 text-sm">Reclamos por medicación de alto valor.</p>
+                    <!-- <a href="#contacto" class="text-secondary font-medium hover:text-primary transition-colors text-sm flex items-center gap-1">Saber más <i class="fa-solid fa-angle-right"></i></a> -->
+                </div>
+
+                <!-- Servicio 4 -->
+                <!-- <div class="bg-white p-8 rounded-sm shadow-md hover:shadow-xl transition-shadow border-t-4 border-transparent hover:border-secondaryLight group">
+                    <div class="w-14 h-14 bg-gray-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary transition-colors text-primary group-hover:text-white text-2xl">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <h4 class="text-xl font-serif font-bold text-primary mb-3">Derecho Laboral</h4>
+                    <p class="text-gray-600 mb-4 text-sm">Conflictos laborales, despidos, accidentes de trabajo y asesoramiento preventivo para empleadores y trabajadores.</p>
+                    <a href="#contacto" class="text-secondary font-medium hover:text-primary transition-colors text-sm flex items-center gap-1">Saber más <i class="fa-solid fa-angle-right"></i></a>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="" class="rounded-sm shadow-2xl relative z-10 w-full object-cover h-[500px]">
+                    <!-- Decoración -->
+                    <div class="absolute -bottom-6 -right-6 w-full h-full border-4 border-secondaryLight rounded-sm z-0"></div>
+                </div>
+                
+                <div>
+                    <h2 class="text-secondaryLight font-semibold tracking-widest uppercase text-sm mb-2">Sobre nosotros</h2>
+                    <h3 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">Matías Mur - Abogado</h3>
+                    <h4 class="text-2xl md:text-3xl font-serif font-bold text-primary mb-6">Experiencia en Derecho de la Salud</h4>
+                    <!-- <p class="text-gray-600 mb-6 leading-relaxed">
+                        Fundada en 2004, <strong>García & Asociados</strong> nació con la visión de transformar la práctica legal mediante un enfoque personalizado y altamente estratégico. No somos solo sus abogados; somos sus aliados estratégicos.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Entendemos que cada caso es único. Por ello, nuestro equipo de especialistas analiza exhaustivamente cada detalle para estructurar defensas sólidas y prevenir contingencias futuras. Nuestra ética inquebrantable y nuestro historial de victorias nos respaldan.
+                    </p> -->
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3 text-primary font-medium">
+                            <i class="fa-solid fa-check-circle text-secondaryLight"></i> Asesoramiento legal especializado en litigios contra obras sociales y empresas de medicina prepaga.
+                        </li>
+                        <li class="flex items-center gap-3 text-primary font-medium">
+                            <i class="fa-solid fa-check-circle text-secondaryLight"></i> Amplio conocimiento del sistema de salud y defensa de los derechos de los pacientes.
+                        </li>
+                        <!-- <li class="flex items-center gap-3 text-primary font-medium">
+                            <i class="fa-solid fa-check-circle text-secondaryLight"></i> Transparencia total en honorarios y procesos.
+                        </li> -->
+                    </ul>
+
+                    <a href="#contacto" class="inline-block bg-primary hover:bg-primaryLight text-white px-8 py-3 rounded-sm font-medium transition-colors">
+                        Solicitar Evaluación de Caso
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección CTA (Llamado a la Acción) intermedia -->
+    <section class="bg-primary py-16 relative overflow-hidden">
+        <!-- Fondo Decorativo -->
+        <div class="absolute top-0 right-0 -mt-10 -mr-10 text-white opacity-5 text-9xl">
+            <i class="fa-solid fa-scale-balanced"></i>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between text-center md:text-left">
+            <div class="mb-8 md:mb-0 md:mr-8">
+                <h3 class="text-2xl md:text-3xl font-serif font-bold text-white mb-2">¿Enfrenta un problema legal complejo?</h3>
+                <p class="text-gray-300">No deje pasar el tiempo. Una consulta temprana puede cambiar el rumbo de su caso.</p>
+            </div>
+            <a href="tel:+1234567890" class="flex items-center gap-3 bg-secondary hover:bg-white hover:text-primary text-white px-8 py-4 rounded-sm font-bold text-lg transition-colors flex-shrink-0">
+                <i class="fa-solid fa-phone"></i> Llámenos: (555) 123-4567
+            </a>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-secondaryLight font-semibold tracking-widest uppercase text-sm mb-2">Testimonios</h2>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">Lo que dicen nuestros clientes</h3>
+                <div class="w-20 h-1 bg-secondaryLight mx-auto mb-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="bg-white p-8 rounded-sm shadow-md relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-gray-200 absolute top-6 left-6 z-0"></i>
+                    <div class="relative z-10">
+                        <p class="text-gray-600 italic mb-6">"El equipo de García & Asociados resolvió un conflicto societario que amenazaba mi empresa. Su nivel de profesionalismo y la claridad con la que me explicaron cada paso fue excepcional."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold font-serif">CM</div>
+                            <div>
+                                <h4 class="font-bold text-primary">Carlos Martínez</h4>
+                                <p class="text-xs text-gray-500 uppercase tracking-wider">Director General</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="bg-white p-8 rounded-sm shadow-md relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-gray-200 absolute top-6 left-6 z-0"></i>
+                    <div class="relative z-10">
+                        <p class="text-gray-600 italic mb-6">"Atravesar un divorcio nunca es fácil, pero tener a esta firma de mi lado me dio una paz mental inmensa. Defendieron mis derechos y los de mis hijos con mucha empatía y firmeza."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-secondaryLight text-white rounded-full flex items-center justify-center font-bold font-serif">LR</div>
+                            <div>
+                                <h4 class="font-bold text-primary">Laura Rodríguez</h4>
+                                <p class="text-xs text-gray-500 uppercase tracking-wider">Cliente Particular</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="bg-white p-8 rounded-sm shadow-md relative">
+                    <i class="fa-solid fa-quote-left text-4xl text-gray-200 absolute top-6 left-6 z-0"></i>
+                    <div class="relative z-10">
+                        <p class="text-gray-600 italic mb-6">"Sufrí un accidente laboral y la empresa no quería responder. Gracias a la intervención inmediata del abogado García, logramos un acuerdo justo sin llegar a un juicio largo."</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold font-serif">JG</div>
+                            <div>
+                                <h4 class="font-bold text-primary">Javier Gómez</h4>
+                                <p class="text-xs text-gray-500 uppercase tracking-wider">Cliente Particular</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-primary rounded-sm shadow-2xl overflow-hidden flex flex-col lg:flex-row">
+                
+                <!-- Info de Contacto -->
+                <div class="lg:w-2/5 p-10 lg:p-14 text-white bg-primaryLight relative">
+                    <h3 class="text-2xl font-serif font-bold mb-6">Información de Contacto</h3>
+                    <p class="text-gray-300 mb-8 font-light">Estamos disponibles para escuchar su caso. Contáctenos hoy mismo para programar una consulta inicial confidencial.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-location-dot text-secondaryLight mt-1 text-xl"></i>
+                            <div>
+                                <h4 class="font-bold">Ubicación</h4>
+                                <p class="text-gray-300 text-sm">Av. Reforma 1234, Piso 5<br>Ciudad, CP 1000</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-envelope text-secondaryLight mt-1 text-xl"></i>
+                            <div>
+                                <h4 class="font-bold">Email</h4>
+                                <p class="text-gray-300 text-sm">consultas@garciayasoc.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-phone text-secondaryLight mt-1 text-xl"></i>
+                            <div>
+                                <h4 class="font-bold">Teléfono</h4>
+                                <p class="text-gray-300 text-sm">+54 (555) 123-4567<br>Emergencias 24/7</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Redes Sociales -->
+                    <div class="mt-12 flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-secondaryLight transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-secondaryLight transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-secondaryLight transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Formulario -->
+                <div class="lg:w-3/5 p-10 lg:p-14 bg-white">
+                    <h3 class="text-2xl font-serif font-bold text-primary mb-6">Envíenos su Consulta</h3>
+                    
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="nombre" class="block text-sm font-medium text-gray-700 mb-2">Nombre Completo</label>
+                                <input type="text" id="nombre" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-secondaryLight focus:border-secondaryLight outline-none transition-all" placeholder="Ej. Juan Pérez" required>
+                            </div>
+                            <div>
+                                <label for="telefono" class="block text-sm font-medium text-gray-700 mb-2">Teléfono</label>
+                                <input type="tel" id="telefono" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-secondaryLight focus:border-secondaryLight outline-none transition-all" placeholder="Su número" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Correo Electrónico</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-secondaryLight focus:border-secondaryLight outline-none transition-all" placeholder="correo@ejemplo.com" required>
+                        </div>
+                        
+                        <div>
+                            <label for="asunto" class="block text-sm font-medium text-gray-700 mb-2">Área de Interés</label>
+                            <select id="asunto" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-secondaryLight focus:border-secondaryLight outline-none transition-all text-gray-600 bg-white">
+                                <option value="">Seleccione un área...</option>
+                                <option value="civil">Derecho Civil</option>
+                                <option value="penal">Derecho Penal</option>
+                                <option value="laboral">Derecho Laboral</option>
+                                <option value="corporativo">Derecho Corporativo</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-2">Mensaje (Opcional pero recomendado)</label>
+                            <textarea id="mensaje" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-secondaryLight focus:border-secondaryLight outline-none transition-all resize-none" placeholder="Describa brevemente su situación..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-secondary hover:bg-secondaryLight text-white font-bold py-4 rounded-sm transition-colors flex justify-center items-center gap-2">
+                            <span>Enviar Mensaje Confidencial</span> <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                        
+                        <p class="text-xs text-gray-500 text-center mt-4">
+                            <i class="fa-solid fa-lock mr-1"></i> Su información será tratada con absoluta confidencialidad bajo el secreto profesional.
+                        </p>
+
+                        <!-- Mensaje de éxito (Oculto por defecto) -->
+                        <div id="form-success" class="hidden mt-4 p-4 bg-green-50 text-green-700 border border-green-200 rounded-sm text-center font-medium">
+                            ¡Gracias! Su mensaje ha sido enviado. Nos comunicaremos a la brevedad.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <!-- Columna 1 -->
+                <div>
+                    <a href="#" class="font-serif text-2xl font-bold tracking-wider flex items-center gap-2 mb-6">
+                        <i class="fa-solid fa-scale-balanced text-secondaryLight"></i>
+                        <span>García<span class="text-secondaryLight">&</span>Asoc.</span>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Excelencia legal, compromiso ético y resultados comprobados. Su mejor aliado estratégico en momentos críticos.
+                    </p>
+                </div>
+
+                <!-- Columna 2 -->
+                <div>
+                    <h4 class="font-bold text-lg mb-6 border-b border-gray-700 pb-2">Enlaces Rápidos</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="#inicio" class="hover:text-secondaryLight transition-colors">Inicio</a></li>
+                        <li><a href="#nosotros" class="hover:text-secondaryLight transition-colors">Sobre Nosotros</a></li>
+                        <li><a href="#areas" class="hover:text-secondaryLight transition-colors">Áreas de Práctica</a></li>
+                        <li><a href="#testimonios" class="hover:text-secondaryLight transition-colors">Casos de Éxito</a></li>
+                        <li><a href="#contacto" class="hover:text-secondaryLight transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3 -->
+                <div>
+                    <h4 class="font-bold text-lg mb-6 border-b border-gray-700 pb-2">Áreas de Práctica</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-secondaryLight transition-colors">Derecho Corporativo</a></li>
+                        <li><a href="#" class="hover:text-secondaryLight transition-colors">Derecho Civil y Familia</a></li>
+                        <li><a href="#" class="hover:text-secondaryLight transition-colors">Derecho Penal</a></li>
+                        <li><a href="#" class="hover:text-secondaryLight transition-colors">Derecho Laboral</a></li>
+                        <li><a href="#" class="hover:text-secondaryLight transition-colors">Propiedad Intelectual</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4 -->
+                <div>
+                    <h4 class="font-bold text-lg mb-6 border-b border-gray-700 pb-2">Horario de Atención</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li class="flex justify-between"><span>Lunes - Viernes:</span> <span>9:00 - 18:00</span></li>
+                        <li class="flex justify-between"><span>Sábados:</span> <span>Con cita previa</span></li>
+                        <li class="flex justify-between text-secondaryLight mt-4 font-bold"><span>Emergencias Penales:</span> <span>24/7</span></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; 2026 García & Asociados. Todos los derechos reservados.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Políticas de Privacidad</a>
+                    <a href="#" class="hover:text-white transition-colors">Términos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Cambiar estilo del Navbar al hacer scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-primary', 'shadow-lg');
+                navbar.classList.remove('bg-transparent', 'py-4');
+                navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('bg-primary', 'shadow-lg');
+                navbar.classList.add('bg-transparent', 'py-4');
+                navbar.classList.remove('py-2');
+            }
+        });
+
+        // Menú Móvil
+        const btnMenu = document.getElementById('mobile-menu-btn');
+        const menuMobile = document.getElementById('mobile-menu');
+        const linksMobile = document.querySelectorAll('.mobile-link');
+
+        btnMenu.addEventListener('click', () => {
+            menuMobile.classList.toggle('hidden');
+        });
+
+        // Cerrar menú móvil al hacer clic en un enlace
+        linksMobile.forEach(link => {
+            link.addEventListener('click', () => {
+                menuMobile.classList.add('hidden');
+            });
+        });
+
+        // Simulación de envío de formulario
+        const form = document.getElementById('contact-form');
+        const successMessage = document.getElementById('form-success');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Aquí iría la lógica de conexión con PHP/WordPress (ej. admin-ajax o Contact Form 7)
+            
+            // Simular carga
+            const btn = form.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Enviando...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                form.reset();
+                successMessage.classList.remove('hidden');
+                
+                // Ocultar mensaje después de 5 segundos
+                setTimeout(() => {
+                    successMessage.classList.add('hidden');
+                }, 5000);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
