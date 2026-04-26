@@ -41,6 +41,13 @@
             }
         }
     </script>
+
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('LrTrvzMlt5filXi8a');
+    </script>
+    
     <style>
         /* Estilos personalizados para animaciones sutiles */
         .fade-in-up {
@@ -271,8 +278,8 @@
                 <h3 class="text-2xl md:text-3xl font-serif font-bold text-white mb-2">¿Enfrenta un problema legal complejo?</h3>
                 <p class="text-gray-300">No deje pasar el tiempo. Una consulta temprana puede cambiar el rumbo de su caso.</p>
             </div>
-            <a href="tel:+1234567890" class="flex items-center gap-3 bg-secondary hover:bg-white hover:text-primary text-white px-8 py-4 rounded-sm font-bold text-lg transition-colors flex-shrink-0">
-                <i class="fa-solid fa-phone"></i> Llámenos: (555) 123-4567
+            <a href="tel:+5492615092577" class="flex items-center gap-3 bg-secondary hover:bg-white hover:text-primary text-white px-8 py-4 rounded-sm font-bold text-lg transition-colors flex-shrink-0">
+                <i class="fa-solid fa-phone"></i> Llámenos: +54 9 261 509-2577
             </a>
         </div>
     </section>
@@ -358,7 +365,7 @@
                             <i class="fa-solid fa-envelope text-secondaryLight mt-1 text-xl"></i>
                             <div>
                                 <h4 class="font-bold">Email</h4>
-                                <p class="text-gray-300 text-sm">consultas@garciayasoc.com</p>
+                                <p class="text-gray-300 text-sm">matiasmur.abogado@gmail.com</p>
                             </div>
                         </div>
                         
@@ -366,7 +373,7 @@
                             <i class="fa-solid fa-phone text-secondaryLight mt-1 text-xl"></i>
                             <div>
                                 <h4 class="font-bold">Teléfono</h4>
-                                <p class="text-gray-300 text-sm">+54 (555) 123-4567<br>Emergencias 24/7</p>
+                                <p class="text-gray-300 text-sm">+54 9 261 509-2577<br>Emergencias 24/7</p>
                             </div>
                         </div>
                     </div>
@@ -375,7 +382,7 @@
                     <div class="mt-12 flex gap-4">
                         <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-secondaryLight transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
                         <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-secondaryLight transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-secondaryLight transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/matiasmur.abogado" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-secondaryLight transition-colors"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
 
@@ -387,22 +394,22 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label for="nombre" class="block text-sm font-medium text-gray-700 mb-2">Nombre Completo</label>
-                                <input type="text" id="nombre" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-secondaryLight focus:border-secondaryLight outline-none transition-all" placeholder="Ej. Juan Pérez" required>
+                                <input type="text" id="nombre" name="nombre" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-secondaryLight focus:border-secondaryLight outline-none transition-all" placeholder="Ej. Juan Pérez" required>
                             </div>
                             <div>
                                 <label for="telefono" class="block text-sm font-medium text-gray-700 mb-2">Teléfono</label>
-                                <input type="tel" id="telefono" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-secondaryLight focus:border-secondaryLight outline-none transition-all" placeholder="Su número" required>
+                                <input type="tel" id="telefono" name="telefono" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-secondaryLight focus:border-secondaryLight outline-none transition-all" placeholder="Su número" required>
                             </div>
                         </div>
                         
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Correo Electrónico</label>
-                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-secondaryLight focus:border-secondaryLight outline-none transition-all" placeholder="correo@ejemplo.com" required>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-secondaryLight focus:border-secondaryLight outline-none transition-all" placeholder="correo@ejemplo.com" required>
                         </div>
                         
                         <div>
                             <label for="asunto" class="block text-sm font-medium text-gray-700 mb-2">Área de Interés</label>
-                            <select id="asunto" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-secondaryLight focus:border-secondaryLight outline-none transition-all text-gray-600 bg-white">
+                            <select id="asunto" name="asunto" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-secondaryLight focus:border-secondaryLight outline-none transition-all text-gray-600 bg-white">
                                 <option value="">Seleccione un área...</option>
                                 <option value="civil">Derecho Civil</option>
                                 <option value="penal">Derecho Penal</option>
@@ -414,7 +421,7 @@
 
                         <div>
                             <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-2">Mensaje (Opcional pero recomendado)</label>
-                            <textarea id="mensaje" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-secondaryLight focus:border-secondaryLight outline-none transition-all resize-none" placeholder="Describa brevemente su situación..."></textarea>
+                            <textarea id="mensaje" name="mensaje" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-secondaryLight focus:border-secondaryLight outline-none transition-all resize-none" placeholder="Describa brevemente su situación..."></textarea>
                         </div>
 
                         <button type="submit" class="w-full bg-secondary hover:bg-secondaryLight text-white font-bold py-4 rounded-sm transition-colors flex justify-center items-center gap-2">
@@ -444,7 +451,7 @@
                 <div>
                     <a href="#" class="font-serif text-2xl font-bold tracking-wider flex items-center gap-2 mb-6">
                         <i class="fa-solid fa-scale-balanced text-secondaryLight"></i>
-                        <span>García<span class="text-secondaryLight">&</span>Asoc.</span>
+                        <span>Mur<span class="text-secondaryLight"> & </span>Asociados</span>
                     </a>
                     <p class="text-gray-400 text-sm leading-relaxed mb-6">
                         Excelencia legal, compromiso ético y resultados comprobados. Su mejor aliado estratégico en momentos críticos.
@@ -458,7 +465,7 @@
                         <li><a href="#inicio" class="hover:text-secondaryLight transition-colors">Inicio</a></li>
                         <li><a href="#nosotros" class="hover:text-secondaryLight transition-colors">Sobre Nosotros</a></li>
                         <li><a href="#areas" class="hover:text-secondaryLight transition-colors">Áreas de Práctica</a></li>
-                        <li><a href="#testimonios" class="hover:text-secondaryLight transition-colors">Casos de Éxito</a></li>
+                        <!-- <li><a href="#testimonios" class="hover:text-secondaryLight transition-colors">Casos de Éxito</a></li> -->
                         <li><a href="#contacto" class="hover:text-secondaryLight transition-colors">Contacto</a></li>
                     </ul>
                 </div>
@@ -489,7 +496,7 @@
 
             <!-- Copyright -->
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-                <p>&copy; 2026 García & Asociados. Todos los derechos reservados.</p>
+                <p>&copy; 2026 Mur & Asociados. Todos los derechos reservados.</p>
                 <div class="flex gap-4 mt-4 md:mt-0">
                     <a href="#" class="hover:text-white transition-colors">Políticas de Privacidad</a>
                     <a href="#" class="hover:text-white transition-colors">Términos de Uso</a>
@@ -536,25 +543,28 @@
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            // Aquí iría la lógica de conexión con PHP/WordPress (ej. admin-ajax o Contact Form 7)
-            
-            // Simular carga
+
             const btn = form.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
             btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Enviando...';
             btn.disabled = true;
 
-            setTimeout(() => {
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-                form.reset();
-                successMessage.classList.remove('hidden');
-                
-                // Ocultar mensaje después de 5 segundos
-                setTimeout(() => {
-                    successMessage.classList.add('hidden');
-                }, 5000);
-            }, 1500);
+            emailjs.sendForm('service_7iw7qr4', 'template_tb5sjnl', form)
+                .then(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    form.reset();
+                    successMessage.classList.remove('hidden');
+                    setTimeout(() => {
+                        successMessage.classList.add('hidden');
+                    }, 5000);
+                })
+                .catch((error) => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    console.error('Error al enviar:', error);
+                    alert('Hubo un error al enviar el mensaje. Por favor, intente nuevamente.');
+                });
         });
     </script>
 </body>
